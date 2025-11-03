@@ -759,11 +759,11 @@ if st.session_state.get('run_analysis', False):
                 st.plotly_chart(fig6, use_container_width=True)
             
             st.subheader("📝 配信ごとの詳細データ")
-            #st.markdown(f"**▶ [各項目について](https://mksoul-pro.com/showroom/repo_koumoku)**", unsafe_allow_html=True)
-            st.link_button(
-                label="▶ 各項目について",  # ボタンに表示されるテキスト
-                url="https://mksoul-pro.com/showroom/repo_koumoku" # 遷移先のURL
-            )
+            st.markdown(f"**▶ [各項目について](https://mksoul-pro.com/showroom/repo_koumoku)**", unsafe_allow_html=True)
+            #st.link_button(
+            #    label="▶ 各項目について",  # ボタンに表示されるテキスト
+            #    url="https://mksoul-pro.com/showroom/repo_koumoku" # 遷移先のURL
+            #)
             df_display = df.sort_values(by="配信日時", ascending=False).copy()
             # --- ここから修正（最小変更） ---
             event_df_master = fetch_event_data()
